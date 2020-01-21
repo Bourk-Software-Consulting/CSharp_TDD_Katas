@@ -158,7 +158,7 @@ namespace Tests
             score = tennisGame.Player1Scores();
 
             //Assert
-            Assert.AreEqual("Player1 Advantage", score);
+            Assert.AreEqual("Player1 Advantage", score,"Deuce to Advantage Failed");
         }
 
         //DEMO PARAMETRIZATION
