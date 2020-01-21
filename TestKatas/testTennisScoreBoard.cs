@@ -160,6 +160,35 @@ namespace Tests
             //Assert
             Assert.AreEqual("Player1 Advantage", score);
         }
+
+        //DEMO PARAMETRIZATION
+        [TestCase("Love:Fifteen", new[] {"p2"})]
+        [TestCase("Fifteen:Fifteen", new[] { "p2", "p1" })]
+        [TestCase("Thirty:Fifteen", new[] { "p2", "p1", "p1" })]
+        [TestCase("Thirty:Thirty", new[] { "p2", "p1", "p1" , "p2" })]
+        [TestCase("Thirty:Forty", new[] { "p2", "p1", "p1", "p2", "p2" })]
+        [TestCase("Forty:Thirty", new[] { "p2", "p1", "p1", "p2", "p1" })]
+        [TestCase("Deuce", new[] { "p2", "p1", "p1", "p2", "p1", "p2" })]
+        [TestCase("Player1 Advantage", new[] { "p2", "p1", "p1", "p2", "p1", "p2", "p1" })]
+        [TestCase("Deuce", new[] { "p2", "p1", "p1", "p2", "p1", "p2", "p1","p2" })]
+        [TestCase("Player2 Advantage", new[] { "p2", "p1", "p1", "p2", "p1", "p2", "p1", "p2", "p2" })]
+        [TestCase("Player2 Wins", new[] { "p2", "p1", "p1", "p2", "p1", "p2", "p1", "p2", "p2", "p2" })]
+        public void testTennisBoardGameWithParametrization(string expected, string[] scores)
+        {
+            string tennisScore = "";
+
+            foreach (string player in scores)
+            {
+                if (player == "p2")
+                    tennisScore = tennisGame.Player2Scores();
+                if (player == "p1")
+                    tennisScore = tennisGame.Player1Scores();
+            }
+
+            //assert
+            Assert.AreEqual(expected, tennisScore);
+
+        }
     }
 
     public class TennisGame
@@ -213,7 +242,7 @@ namespace Tests
 
         private bool isAdvantage(int playerAScore, int playerBScore)
         {
-            if (playerAScore >= 3
+            if (playerAScore > 3
                 && playerAScore - playerBScore == 1)
                 return true;
             return false;
@@ -229,8 +258,8 @@ namespace Tests
 
         public bool isAWinner(int playerAscore, int playerBscore)
         {
-            if (playerAscore >= 3
-                && playerAscore - playerBscore > 2)
+            if (playerAscore > 3
+                && (playerAscore - playerBscore) >= 2)
                 return true;
 
             return false;
