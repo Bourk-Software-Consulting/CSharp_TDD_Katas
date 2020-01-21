@@ -32,34 +32,25 @@ namespace TestKatas
             mockUI.Verify(m =>m.updateUI("Rock Crushes Scissor"));
         }
 
-
+        // DEMO TestCaseData - notice the injection of the mock in the constructor and the use of STATIC
+        private static Mock<IRockPaperScissorUi> static_mockUI = new Mock<IRockPaperScissorUi>();
+        private static RockPaperScissor static_rockpaperscissor = new RockPaperScissor(static_mockUI.Object);
         private static IEnumerable<TestCaseData> RockPaperScissorCases()
         {
-            var mockUI = new Mock<IRockPaperScissorUi>();
-
-            var rockpaperscissor = new RockPaperScissor(mockUI.Object);
-
-            var rock = new Rock(rockpaperscissor);
-            var paper = new Paper(rockpaperscissor);
-            var scissor = new Scissor(rockpaperscissor);
+            var rock = new Rock(static_rockpaperscissor);
+            var paper = new Paper(static_rockpaperscissor);
+            var scissor = new Scissor(static_rockpaperscissor);
 
             yield return new TestCaseData(rock, paper, "Paper Covers Rock");
             yield return new TestCaseData(rock, scissor, "Rock Crushes Scissor");
             yield return new TestCaseData(paper, scissor, "Scissor Cuts Paper");
         }
 
-        [Test, TestCaseSource("AddCases")]
-        public void testRockPaperExpectPaperCoversRock()
+        [Test, TestCaseSource("RockPaperScissorCases")]
+        public void testRockPaperExpectPaperCoversRock(Player one, Player two, string expected)
         {
-            Mock<IRockPaperScissorUi> mockUI = new Mock<IRockPaperScissorUi>();
-            RockPaperScissor rockpaperscissor = new RockPaperScissor(ui: mockUI.Object);
-            Player rock = new Rock(listener: rockpaperscissor);
-            Player paper = new Paper(listener: rockpaperscissor);
-
-            rockpaperscissor.play(player1: paper, player2: rock);
-            rockpaperscissor.play(player1: rock, player2: paper);
-
-            mockUI.Verify(expression: m => m.updateUI("Paper Covers Rock"),times: Times.AtLeast(callCount: 2));
+            rockpaperscissor.play(one,two);
+            static_mockUI.Verify(m => m.updateUI(expected));//FAILS - the call never performs.
         }
 
         [Test]
