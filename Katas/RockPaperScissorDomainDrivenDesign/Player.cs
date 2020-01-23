@@ -1,4 +1,4 @@
-﻿namespace Kata_RockPaperScissors
+﻿namespace Katas.RockPaperScissorDomainDrivenDesign
 {
     internal abstract class Player
     {

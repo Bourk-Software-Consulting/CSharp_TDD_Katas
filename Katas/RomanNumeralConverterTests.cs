@@ -2,9 +2,9 @@
 using System.Linq;
 using NUnit.Framework;
 
-namespace Kata_RomanNumeral
+namespace Katas
 {
-    class testRomanNumeral
+    class RomanNumeralConverterTests
     {
         //Demo Parametrized test using NUnit
         [TestCase("CLV", 155)]

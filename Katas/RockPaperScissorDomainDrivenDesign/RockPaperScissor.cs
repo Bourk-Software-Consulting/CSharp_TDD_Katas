@@ -1,4 +1,4 @@
-﻿namespace Kata_RockPaperScissors
+﻿namespace Katas.RockPaperScissorDomainDrivenDesign
 {
     internal class RockPaperScissor : IRockListener, IScissorListener, IPaperListener
     {

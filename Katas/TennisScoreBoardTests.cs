@@ -1,11 +1,9 @@
-using System;
-using System.Threading;
 using Moq;
 using NUnit.Framework;
 
-namespace Kata_TennisScoreBoard
+namespace Katas
 {
-    public class Tests
+    public class TennisScoreBoardTests
     {
         private TennisGame tennisGame;
         private Mock<ITennisGui> guiMock;

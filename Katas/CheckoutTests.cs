@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Schema;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
 
-namespace Kata_Checkout
+namespace Katas
 {
     public class CheckoutTests
     {

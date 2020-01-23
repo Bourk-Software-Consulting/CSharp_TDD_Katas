@@ -1,4 +1,4 @@
-﻿namespace TestKatas.InheritanceVsComposition.Inheritance
+﻿namespace InheritanceVsComposition.Inheritance
 {
     //this class cannot be instantiated directly. 
     //This class will be like a signature, used just like an "inteface" so we can use Object Oriented benefits.

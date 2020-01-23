@@ -3,7 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestKatas", "TestKatas\TestKatas.csproj", "{0315849A-E5A0-401E-B96A-8D84DE6753CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Katas", "Katas\Katas.csproj", "{70FDF704-CB99-48BE-ABCA-3E70823B9964}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Concepts", "Concepts", "{6E64EC9E-43F2-43BB-B773-0E00E4BE38A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InheritanceVsComposition", "InheritanceVsComposition", "{E66D1655-EADB-45DA-A180-633D52F17F51}"
+	ProjectSection(SolutionItems) = preProject
+		InheritanceVsComposition\favorComposition.txt = InheritanceVsComposition\favorComposition.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Composition", "Composition", "{25867169-6874-4794-9866-E723E9AEED4B}"
+	ProjectSection(SolutionItems) = preProject
+		InheritanceVsComposition\Composition\Child.cs = InheritanceVsComposition\Composition\Child.cs
+		InheritanceVsComposition\Composition\GrandChild.cs = InheritanceVsComposition\Composition\GrandChild.cs
+		InheritanceVsComposition\Composition\ILivingBeing.cs = InheritanceVsComposition\Composition\ILivingBeing.cs
+		InheritanceVsComposition\Composition\Parent.cs = InheritanceVsComposition\Composition\Parent.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inheritance", "Inheritance", "{C568A7CD-4E4A-42EB-9ED5-ADC06D87B6FE}"
+	ProjectSection(SolutionItems) = preProject
+		InheritanceVsComposition\Inheritance\Child.cs = InheritanceVsComposition\Inheritance\Child.cs
+		InheritanceVsComposition\Inheritance\GrandChild.cs = InheritanceVsComposition\Inheritance\GrandChild.cs
+		InheritanceVsComposition\Inheritance\Parent.cs = InheritanceVsComposition\Inheritance\Parent.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +33,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0315849A-E5A0-401E-B96A-8D84DE6753CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0315849A-E5A0-401E-B96A-8D84DE6753CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0315849A-E5A0-401E-B96A-8D84DE6753CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0315849A-E5A0-401E-B96A-8D84DE6753CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70FDF704-CB99-48BE-ABCA-3E70823B9964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70FDF704-CB99-48BE-ABCA-3E70823B9964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70FDF704-CB99-48BE-ABCA-3E70823B9964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70FDF704-CB99-48BE-ABCA-3E70823B9964}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E66D1655-EADB-45DA-A180-633D52F17F51} = {6E64EC9E-43F2-43BB-B773-0E00E4BE38A9}
+		{25867169-6874-4794-9866-E723E9AEED4B} = {E66D1655-EADB-45DA-A180-633D52F17F51}
+		{C568A7CD-4E4A-42EB-9ED5-ADC06D87B6FE} = {E66D1655-EADB-45DA-A180-633D52F17F51}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B6919D6B-CBE6-4432-88F3-7EC71BACEE2D}

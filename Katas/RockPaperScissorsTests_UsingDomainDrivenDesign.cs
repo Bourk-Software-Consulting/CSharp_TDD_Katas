@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using Katas.RockPaperScissorDomainDrivenDesign;
 using Moq;
 using NUnit.Framework;
 
-namespace Kata_RockPaperScissors
+namespace Katas
 {
-    class RockPaperScissorsTests_DDD
+    class RockPaperScissorsTestsUsingDomainDrivenDesign
     {
         private  Mock<IRockPaperScissorUi> mockUI ;
         private RockPaperScissor rockpaperscissor;
