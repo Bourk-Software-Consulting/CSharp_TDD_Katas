@@ -1,4 +1,4 @@
-﻿namespace TestKatas
+﻿namespace Kata_RockPaperScissors
 {
     internal interface IRockListener : IRockPaperScissorListener
     {

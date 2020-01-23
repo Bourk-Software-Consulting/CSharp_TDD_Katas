@@ -5,7 +5,7 @@ using System.Text;
 using System.Xml.Schema;
 using NUnit.Framework;
 
-namespace nCheckoutTests
+namespace Kata_Checkout
 {
     public class CheckoutTests
     {

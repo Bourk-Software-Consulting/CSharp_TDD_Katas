@@ -1,4 +1,4 @@
-﻿namespace TestKatas
+﻿namespace Kata_RockPaperScissors
 {
     internal abstract class Player
     {

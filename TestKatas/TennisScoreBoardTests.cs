@@ -3,7 +3,7 @@ using System.Threading;
 using Moq;
 using NUnit.Framework;
 
-namespace Tests
+namespace Kata_TennisScoreBoard
 {
     public class Tests
     {

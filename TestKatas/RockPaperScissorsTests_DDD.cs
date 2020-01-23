@@ -4,9 +4,9 @@ using System.Text;
 using Moq;
 using NUnit.Framework;
 
-namespace TestKatas
+namespace Kata_RockPaperScissors
 {
-    class testRockPaperScissors_DDD
+    class RockPaperScissorsTests_DDD
     {
         private  Mock<IRockPaperScissorUi> mockUI ;
         private RockPaperScissor rockpaperscissor;
@@ -76,7 +76,7 @@ namespace TestKatas
             _listener = listener;
         }
 
-        protected internal void againstPaper()
+        protected internal override void againstPaper()
         {
             _listener.draw();
         }

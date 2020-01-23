@@ -1,0 +1,22 @@
+﻿The purpose of this folder is to explain why and how to use composition over inheritance.
+you can read more here https://en.wikipedia.org/wiki/Composition_over_inheritance
+
+Inheritance is a powerful concept used in Object Oriented programming. 
+It allows to reuse code from a parent or a child.
+Over time, experience demonstrated inheritance can become messy and hard to maintain. 
+Hence, over time, we see the emergence of some restriction limiting inheritance (Java), 
+or dismiss it totaly (Go! https://en.wikipedia.org/wiki/Go_(programming_language))
+
+Favor Composition over Inheritance
+Composition is the idea of objects holding instances of other objects in forms of variables.
+It ends up being a more transparent type of relationship with the other object, which could 
+represent the parent or a child if we compare it to inheritance. 
+Composition gives the design higher flexibility as you can reuse only the code you really care for.
+I personnaly found using Composition creates code that is easier to debug. 
+
+The draw back of using composition is to have a class implement an interface and end up only forwarding
+the method calls. 
+
+I invite you to compare the code from the Composition and Inheritance and draw your own conclusion.
+How different is the reading of the GrandChild? While inspecting the Inheritance code, did you get 
+the subtleties in using the parents?
